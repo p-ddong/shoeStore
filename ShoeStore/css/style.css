@@ -1,0 +1,297 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+
+    font-family: "Inter", sans-serif;
+}
+
+/* header */
+
+header{
+    background-color: black;
+    height: 50px;
+
+    color: white;
+    font-size: 16px;
+}
+
+header p {
+    margin: 0px;
+}
+
+header .fab{
+    font-size: 30px;
+}
+
+header .fa{
+    font-size: 25px;
+}
+
+/* menu */
+
+#menu{
+    height: 50px;
+}
+#menu .menu-item{
+    position: relative;
+}
+#menu .menu-item::after{
+    content: "";
+    position: absolute;
+
+    color: black;
+    background-color: black;
+    width: 0%;
+    height: 1px;
+    left: 0;
+    bottom: -13px;
+
+    transition: all 0.3s;
+}
+
+#menu .menu-item:first-child::after{
+    width: 100%;
+}
+
+#menu .menu-item:hover::after{
+    width: 100%;
+}
+
+
+/* carousel */
+#carousel{
+    /* background-image:url("../access/img/carouselBG.png");
+    background-size:100%;
+    background-repeat: no-repeat; */
+
+    height: 560px;
+    position: relative;
+}
+
+#carousel .carousel-bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+.carousel-description{
+    margin-top: 4em;
+    margin-right: 6em;
+}
+
+.carousel-name{
+    text-transform: uppercase;
+}
+.carousel-item-description{
+    text-transform: uppercase;
+}
+
+.carousel-btn{
+    border: none;
+
+    background-color: #F8B653;
+    color: white;
+
+    width: 150px;
+    height: 50px;
+}
+
+/* product */
+#product .tag{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+#product-list{
+    width: 80%;
+}
+
+.card-btn{
+    background-color: #DEDDDC;
+}
+
+.card-btn div{
+    width: 40%;
+}
+
+.card-btn div p{
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+.card-btn button{
+    border: none;
+
+    background-color: #F8B653;
+    color: black;
+
+    font-size: 24px;
+
+    width: 60%;
+    height: 60px;
+}
+
+.card-decription{
+    font-size: 20px;
+    color: #CBC9C9;
+}
+
+.card-title{
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.card-img-top{
+    padding: 50px;
+}
+
+/* detail */
+#detail{
+    gap:200px;
+    width: 80%;
+}
+
+.size {
+    display: inline-block;
+}
+  
+.square-radio {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px; 
+}
+  
+.square-radio input {
+    position: absolute;
+    opacity: 0;
+}
+  
+.square-radio .radio-label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    background-color: #CCCCCC;
+    
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 24px;
+
+    color: rgb(0, 0, 0);
+    transition: all 0.3s;
+}
+  
+.square-radio input:checked ~.radio-label {
+    background-color: #0084ff;
+}
+
+#detail button{
+    border: none;
+}
+
+#detail-img{
+    width: 334px;
+    height: 355px;
+}
+  
+.btn{
+    border-radius: 0;
+
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+
+    font-size: 20px;
+    color: white;
+}
+#count-box{
+    gap:15px
+}
+
+#count-box p{
+margin-bottom: 0px;
+}
+
+#add-to-cart{
+    margin-top: 10px;
+    width: 175px;
+    height: 64px;
+
+    background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+    
+    color: #FFF8F8;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#detail-price{
+    font-size: 30px;
+    font-weight: 600;
+
+    color: red;
+}
+
+@media screen and (max-width: 1350px) {
+
+    .card-btn div p{
+        font-size: 18px;
+    }
+    
+    .card-btn button{
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width: 950px) {
+    #detail{
+        gap:60px;
+        margin-left: 30px !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+   
+    .carousel-img{
+        width: 400px;
+        height: 400px;
+        margin-right: 40px;
+
+    }
+
+    #detail{
+        gap:60px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #detail-decription{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    #carousel{
+        position: relative;
+        flex-direction: column;
+    }
+    .carousel-item-description{
+        display: none;
+    }
+    .carousel-description{
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 0px;
+        bottom: 15%;
+    }
+}
